@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>auth-tree-node-parent</artifactId>
+        <groupId>org.forgerock.am</groupId>
+        <version>6.0.0</version>
+    </parent>
+    <organization>
+        <name>inBay Technologies</name>
+        <url>https://www.inbaytech.com</url>
+    </organization>
+    <licenses>
+    <license>
+        <name>Common Development and Distribution License 1.0</name>
+        <url>https://opensource.org/licenses/CDDL-1.0</url>
+        <distribution>repo</distribution>
+    </license>
+    </licenses>
+
+    <artifactId>idqEnterpriseNode</artifactId>
+    <groupId>com.inbaytech.am</groupId>
+    <version>1.0.0</version>
+    <name>idQ Enterprise Node</name>
+    <description>An Authentication Tree Node which integrates idQ Enterprise with ForgeRock's Identity Platform
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.oltu.oauth2</groupId>
+            <artifactId>org.apache.oltu.oauth2.client</artifactId>
+            <version>1.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20160807</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.1.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                        <artifactSet>
+                            <includes>
+                            <include>org.apache.oltu.oauth2:org.apache.oltu.oauth2.client</include>
+                            <include>org.json:json</include>
+                            </includes>
+                        </artifactSet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
