@@ -32,7 +32,7 @@ Copy the idqEnterpriseNode.jar file into the __web-container/webapps/openam/WEB-
 |   |   |
 |---|---|
 | 1. Log in to your idQ Enterprise Portal (https://**\<your-organization\>**.idquanta.com) as a user with administrator privilege.<br>2. Navigate to Applications > New Application > OAuth 2.0 | ![screenshot](images/Idq1.png "idQ Configuration 1") |
-| 3. On the New OAuth 2.0 Application screen of the idQ Enterprise Portal, enter values for the Name and Callback URL (https://**\<your_ForgeRock_site\>**/openam) fields.  You may ptionally supply a Description.  Leave Sign-On URL blank.<br>4. Click Create. | ![screenshot](images/Idq2.png "idQ Configuration 2")
+| 3. On the New OAuth 2.0 Application screen of the idQ Enterprise Portal, enter values for the Name and Callback URL (https://**\<your_ForgeRock_site\>**/openam) fields.  You may optionally supply a Description.  Leave Sign-On URL blank.<br>4. Click Create. | ![screenshot](images/Idq2.png "idQ Configuration 2")
 | 5. Upon successful creation, the *Application Added* screen will be shown.<br>6. Note the OAuth Endpoint, Client ID and Client Secret shown here.  They will be required in the configuration of the ForgeRock AM node. | ![screenshot](images/Idq3.png "idQ Configuration 3")
 
 ## __Configuring ForgeRock AM__
