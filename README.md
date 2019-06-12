@@ -15,6 +15,7 @@
 -->
 ![logo](images/inBayLogo.png)<br>
 [www.inbaytech.com](https://www.inbaytech.com/)
+
 # idQ Enterprise Auth Tree Node
 
 This module provides an integration of inBay's [idQ Enterprise](https://www.inbaytech.com/product) with [ForgeRock's Identity Platform](https://www.forgerock.com/platform/).
